@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(22, 33, 54);
+  color: #ffffff;
+}
+@media screen and (max-width: 734px) {
+  .wrap {
+    height: fit-content;
+    padding-top: 50px;
+  }
+}
+
+.title {
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 10;
+}
+@media screen and (max-width: 734px) {
+  .title {
+    padding: 0 40px;
+  }
+}
+.title h1 {
+  text-align: center;
+  font-size: 28px;
+}
+@media screen and (max-width: 734px) {
+  .title h1 {
+    font-size: 19px;
+  }
+}
+
+section.calendar {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto 0 auto;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 10px;
+  overflow: hidden;
+}
+@media screen and (max-width: 734px) {
+  section.calendar {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+}
+section.calendar .card {
+  padding: 10px 0;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3137254902);
+}
+section.calendar .card.day-1 {
+  grid-area: 1/1/2/3;
+}
+section.calendar .card.day-2 {
+  grid-area: 1/3/2/4;
+}
+section.calendar .card.day-3 {
+  grid-area: 1/4/2/5;
+}
+section.calendar .card.day-4 {
+  grid-area: 1/5/2/6;
+}
+section.calendar .card.day-5 {
+  grid-area: 2/1/3/2;
+}
+section.calendar .card.day-6 {
+  grid-area: 2/2/3/3;
+}
+section.calendar .card.day-7 {
+  grid-area: 2/3/3/4;
+}
+section.calendar .card.day-8 {
+  grid-area: 2/4/4/5;
+}
+section.calendar .card.day-9 {
+  grid-area: 2/5/3/6;
+}
+section.calendar .card.day-10 {
+  grid-area: 3/1/4/2;
+}
+section.calendar .card.day-11 {
+  grid-area: 3/2/4/3;
+}
+section.calendar .card.day-12 {
+  grid-area: 3/3/4/4;
+}
+section.calendar .card.day-13 {
+  grid-area: 3/5/4/6;
+}
+section.calendar .card.day-14 {
+  grid-area: 4/1/5/3;
+}
+section.calendar .card.day-15 {
+  grid-area: 4/3/5/4;
+}
+section.calendar .card.day-16 {
+  grid-area: 4/4/5/5;
+}
+section.calendar .card.day-17 {
+  grid-area: 4/5/5/6;
+}
+section.calendar .card.day-18 {
+  grid-area: 5/1/6/2;
+}
+section.calendar .card.day-19 {
+  grid-area: 5/2/6/3;
+}
+section.calendar .card.day-20 {
+  grid-area: 5/3/7/4;
+}
+section.calendar .card.day-21 {
+  grid-area: 5/4/6/5;
+}
+section.calendar .card.day-22 {
+  grid-area: 5/5/6/6;
+}
+section.calendar .card.day-23 {
+  grid-area: 6/1/7/2;
+}
+section.calendar .card.day-24 {
+  grid-area: 6/2/7/3;
+}
+section.calendar .card.day-25 {
+  grid-area: 6/4/7/6;
+}
+@media screen and (max-width: 734px) {
+  section.calendar .card.day-1 {
+    grid-area: 1/1/2/3;
+  }
+  section.calendar .card.day-2 {
+    grid-area: 1/3/2/4;
+  }
+  section.calendar .card.day-3 {
+    grid-area: 2/1/3/2;
+  }
+  section.calendar .card.day-4 {
+    grid-area: 2/2/3/3;
+  }
+  section.calendar .card.day-5 {
+    grid-area: 2/3/3/4;
+  }
+  section.calendar .card.day-6 {
+    grid-area: 3/1/4/2;
+  }
+  section.calendar .card.day-7 {
+    grid-area: 3/2/4/4;
+  }
+  section.calendar .card.day-8 {
+    grid-area: 4/1/5/2;
+  }
+  section.calendar .card.day-9 {
+    grid-area: 4/2/5/3;
+  }
+  section.calendar .card.day-10 {
+    grid-area: 4/3/6/4;
+  }
+  section.calendar .card.day-11 {
+    grid-area: 5/1/6/3;
+  }
+  section.calendar .card.day-12 {
+    grid-area: 6/1/7/2;
+  }
+  section.calendar .card.day-13 {
+    grid-area: 6/2/7/3;
+  }
+  section.calendar .card.day-14 {
+    grid-area: 6/3/7/4;
+  }
+  section.calendar .card.day-15 {
+    grid-area: 7/1/9/2;
+  }
+  section.calendar .card.day-16 {
+    grid-area: 7/2/8/3;
+  }
+  section.calendar .card.day-17 {
+    grid-area: 7/3/8/4;
+  }
+  section.calendar .card.day-18 {
+    grid-area: 8/2/9/4;
+  }
+  section.calendar .card.day-19 {
+    grid-area: 9/1/10/2;
+  }
+  section.calendar .card.day-20 {
+    grid-area: 9/2/10/3;
+  }
+  section.calendar .card.day-21 {
+    grid-area: 9/3/10/4;
+  }
+  section.calendar .card.day-22 {
+    grid-area: 10/1/12/2;
+  }
+  section.calendar .card.day-23 {
+    grid-area: 10/2/11/3;
+  }
+  section.calendar .card.day-24 {
+    grid-area: 10/3/11/4;
+  }
+  section.calendar .card.day-25 {
+    grid-area: 11/2/12/4;
+  }
+}
+section.calendar .card .back {
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+section.calendar .card input {
+  display: none;
+}
+section.calendar .card label {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  height: 120px;
+}
+@media screen and (max-width: 734px) {
+  section.calendar .card label {
+    height: 100px;
+  }
+}
+section.calendar .card .door {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 300ms;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+section.calendar .card .door .front, section.calendar .card .door .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  font-size: 19px;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+section.calendar .card .door .front {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+section.calendar .card .door .front .date-num {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  color: #ffffff;
+  font-weight: 600;
+}
+section.calendar .card .door .back {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+}
+section.calendar .card .door + :checked {
+  transform: rotateY(180deg);
+}
+@keyframes zoomAndRotate {
+  from {
+    transform: scale(0) rotateY(0deg);
+  }
+  to {
+    transform: scale(1) rotateY(360deg);
+  }
+}
+section.calendar .card .door .zoomIn {
+  animation: zoomAndRotate 0.5s ease forwards;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  font-family: "Montserrat";
+  background-color: rgba(27, 27, 27, 0.5);
+}
+.modal .modal-content {
+  width: 340px;
+  height: 340px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 734px) {
+  .modal .modal-content {
+    width: 300px;
+    height: 300px;
+  }
+}
+.modal .modal-content div {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+}
+.modal .modal-content p {
+  width: 260px;
+  color: black;
+  margin-top: 30px;
+  margin-bottom: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-weight: bold;
+  font-size: 17px;
+  word-break: keep-all;
+}
+@media screen and (max-width: 734px) {
+  .modal .modal-content p {
+    font-size: 14px;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.snow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.8;
+  overflow: hidden;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0AgMAAAC2uDcZAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURQAAAP///////////zjAO6gAAAAEdFJOUwAuxHKQ3Q8qAAADW0lEQVR42u3dP26jQByGYUbaEe0Wi+jgKj5CirjFp9gGKXAfkOUmW+YOW2QvgdtN45XlHMAgB2aYz955nzrJp2AYM39/SYJrmTLcbDfK9MtvYbod3oXp6fCqTO8iTpdeeaNNP/1VprfKJy7ZPinTLV91AAAAAAAAAAD4kkkH/XfKCQ/TSCd7Tm/K9GHv9+89KdOzrTK9PM/68dpverXfzPnxxu9d1/Sz0ncfXtPreenZszLd+G1pq17Zchfz/nfPyoMyPT0r0802AQDMYZWt9uS7R5jWfOK9y7wEuSYT75z2EuQNph5/QU67IItrJ14S0+5dmv4aQfpBmT7RLUuHIGMO+XiXNNCCcjve1pk2TI9lIkW6lB8AAACITcxTza12qvmXMt3zdCvpX//clelJ/SZ93j+U6bl0J6+VtrQAAAAAAADwxz4r03PpGNtOOr7YLN2D8MNHer1w/4WfA00Xp3tZ8bk03R59DMo2C9PTzscUUHFYmu5j1WN+VqbbhWul/aSbhS2t5UBTFfGBppsEAAAA+Mp7qzJcW/Ik0J7QqZ7ioCy4EmhP6Kq9ZNKX3HXaEQLtwmjlEyfeE/qNrzoAc1+SmPQTaaQHj9U96RqVNF172F4uPe7OSlsbI21pAQAAAPyPjHSlWibt5WgPami0R2QwnhRleqMtn7BXpudn5ROnHTtPOJgFAIA7c58VQgL1wpT7xHxXpZvZ+a73MadH3Adc83+/OaRTrXnP39wrW6456nJzycCqvbCb1QFXHW0rxEtF3NbTun0whWNNJbfKiq7pblUlXa+8232TH9zuabdrZx2XCLmlu1bEdLxvvkvTXVvqXrrj5aJsK81P6fs+S8sAAAAAAAAAAAAAPJKYS3430pP3B0p+R5lOyW8VSn4DAAAAANbt80t3EljpLoqAO0hGLnPA3TMjGzoD7hwa2dAZMH1kY17A9KK/GlrJA6ZfR6XSdHtRpps22DhXOfJwh6sXkx6VA3pWeua7kRZAw0OSlnIK2CyNpf9TTj1oC5xri6dZ8TRrxOknadG8Vnpc0k7a48uULS0AAHhQDFiL5L2yn6o96irm9LzTFraXph/d0t1Oi3QdGcr+OP2646hYKa3VUEmrozRRV0eRfk/EXG1Xes8z7wMAAHAHPgHhchfsTyUPMgAAAABJRU5ErkJggg==) center center repeat scroll, url(data:image/png;base64,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) center center repeat fixed rgb(22, 33, 54);
+  -webkit-background-size: 450px auto;
+  -moz-background-size: 450px auto;
+  -o-background-size: 450px auto;
+  background-size: 450px auto;
+  -webkit-animation: snowing 20s linear infinite;
+  -moz-animation: snowing 20s linear infinite;
+  -ms-animation: snowing 20s linear infinite;
+  -o-animation: snowing 20s linear infinite;
+  animation: snowing 20s linear infinite;
+  z-index: 1;
+}
+@-webkit-keyframes snowing {
+  from {
+    background-position-y: 0px, 0px;
+  }
+  to {
+    background-position-y: 900px, 450px;
+  }
+}
+@-moz-keyframes snowing {
+  from {
+    background-position-y: 0px, 0px;
+  }
+  to {
+    background-position-y: 900px, 450px;
+  }
+}
+@-ms-keyframes snowing {
+  from {
+    background-position-y: 0px, 0px;
+  }
+  to {
+    background-position-y: 900px, 450px;
+  }
+}
+@-o-keyframes snowing {
+  from {
+    background-position-y: 0px, 0px;
+  }
+  to {
+    background-position-y: 900px, 450px;
+  }
+}
+@keyframes snowing {
+  from {
+    background-position-y: 0px, 0px;
+  }
+  to {
+    background-position-y: 900px, 450px;
+  }
+}
